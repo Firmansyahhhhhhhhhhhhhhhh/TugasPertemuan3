@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Kegiatan Mahasiswa</title>
+    <link rel="stylesheet" href="TugasMandiri.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1>Portal Kegiatan Mahasiswa</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#kegiatan">Kegiatan</a></li>
+                    <li><a href="#jadwal">Jadwal</a></li>
+                    <li><a href="#pendaftaran">Pendaftaran</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Section Hero -->
+        <section id="hero" class="hero">
+            <h2>Selamat Datang di Portal Kegiatan Mahasiswa</h2>
+            <p>Wadah resmi informasi, pendaftaran, dan rekapitulasi agenda kegiatan kemahasiswaan kampus.</p>
+        </section>
+
+        <!-- Section Card Kegiatan -->
+        <section id="kegiatan" class="cards-section">
+            <h2>Kegiatan Mendatang</h2>
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>Seminar Teknologi</h3>
+                    <p>Diskusi interaktif mengenai perkembangan AI dan dampaknya terhadap industri masa depan.</p>
+                    <a href="#" class="btn">Detail Kegiatan</a>
+                </article>
+                <article class="card">
+                    <h3>Lomba Karya Tulis</h3>
+                    <p>Kompetisi menulis gagasan inovatif mahasiswa tingkat nasional dengan total hadiah jutaan rupiah.</p>
+                    <a href="#" class="btn">Detail Kegiatan</a>
+                </article>
+                <article class="card">
+                    <h3>Workshop Desain UI/UX</h3>
+                    <p>Pelatihan praktis merancang antarmuka aplikasi modern menggunakan Figma dari praktisi ahli.</p>
+                    <a href="#" class="btn">Detail Kegiatan</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section Tabel Jadwal -->
+        <section id="jadwal" class="table-section">
+            <h2>Jadwal Kegiatan Terdekat</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Kegiatan</th>
+                            <th>Tanggal</th>
+                            <th>Lokasi</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Seminar Teknologi</td>
+                            <td>20 Oktober 2026</td>
+                            <td>Auditorium Utama</td>
+                            <td>Buka</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Lomba Karya Tulis</td>
+                            <td>25 Oktober 2026</td>
+                            <td>Online / Zoom</td>
+                            <td>Buka</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Workshop Desain UI/UX</td>
+                            <td>02 November 2026</td>
+                            <td>Lab Komputer 3</td>
+                            <td>Buka</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Pentas Seni Kampus</td>
+                            <td>15 November 2026</td>
+                            <td>Lapangan Lapangan</td>
+                            <td>Mendatang</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section Form Pendaftaran -->
+        <section id="pendaftaran" class="form-section">
+            <h2>Form Pendaftaran Kegiatan</h2>
+            <form action="#" method="POST" class="form-kegiatan">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kegiatan-pilihan">Pilih Kegiatan</label>
+                    <select id="kegiatan-pilihan" name="kegiatan-pilihan" required>
+                        <option value="">-- Pilih Kegiatan --</option>
+                        <option value="seminar">Seminar Teknologi</option>
+                        <option value="lkti">Lomba Karya Tulis</option>
+                        <option value="workshop">Workshop Desain UI/UX</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="alasan">Alasan Mengikuti</label>
+                    <textarea id="alasan" name="alasan" rows="4" placeholder="Tuliskan alasan Anda..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Kirim Pendaftaran</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 Portal Kegiatan Mahasiswa. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
