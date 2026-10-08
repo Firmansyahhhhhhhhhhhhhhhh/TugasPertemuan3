@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal Pendaftaran Kegiatan Mahasiswa">
+    <title>Pendaftaran Kegiatan Mahasiswa</title>
+    <link rel="stylesheet" href="TugasMandiri.css">
+</head>
+<body>
+
+    <!-- Header & Navigasi Utama -->
+    <header>
+        <h1>Portal Kegiatan Mahasiswa</h1>
+        <nav>
+            <ul>
+                <li><a href="#informasi">Informasi Kegiatan</a></li>
+                <li><a href="#jadwal">Jadwal Kegiatan</a></li>
+                <li><a href="#pendaftaran">Form Pendaftaran</a></li>
+                <li><a href="#faq">Pertanyaan Umum (FAQ)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Section 1: Informasi & Artikel -->
+        <section id="informasi">
+            <h2>Informasi Kegiatan Kampus</h2>
+            
+            <article>
+                <h3>Pengumuman Pendaftaran Kegiatan Mahasiswa</h3>
+                <p>Pendaftaran kegiatan kemahasiswaan semester ini resmi dibuka. Seluruh mahasiswa aktif diharapkan berpartisipasi dalam agenda tahunan ini.</p>
+                
+
+
+            <!-- Elemen Aside -->
+            <aside>
+                <h4>Informasi Penting</h4>
+                <p>Pastikan Anda mengisi data pendaftaran dengan benar. Pengumuman seleksi peserta akan dikirimkan melalui email kampus.</p>
+            </aside>
+        </section>
+
+        <!-- Section 2: Tabel Jadwal Kegiatan -->
+        <section id="jadwal">
+            <h2>Jadwal Kegiatan Kemahasiswaan</h2>
+            <table>
+                <caption>Daftar Agenda Kegiatan Mahasiswa Semester Ini</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Kegiatan</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Lokasi</th>
+                        <th scope="col">Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Seminar Teknologi AI</td>
+                        <td>20 Oktober 2026</td>
+                        <td>Auditorium Utama</td>
+                        <td>100 Orang</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Workshop Desain UI/UX</td>
+                        <td>25 Oktober 2026</td>
+                        <td>Lab Komputer 2</td>
+                        <td>50 Orang</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Lomba Karya Tulis Ilmiah</td>
+                        <td>02 November 2026</td>
+                        <td>Daring / Zoom</td>
+                        <td>75 Orang</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Pelatihan Kepemimpinan</td>
+                        <td>10 November 2026</td>
+                        <td>Ruang Serbaguna</td>
+                        <td>40 Orang</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pentas Seni & Budaya</td>
+                        <td>15 November 2026</td>
+                        <td>Lapangan Utama</td>
+                        <td>200 Orang</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="4">Total Jenis Kegiatan</th>
+                        <td>5 Kegiatan</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Section 3: Form Pendaftaran (Minimal 12 Kontrol Input + Constraint Validasi) -->
+        <section id="pendaftaran">
+            <h2>Form Pendaftaran Kegiatan</h2>
+            <form action="proses.php" method="post" enctype="multipart/form-data">
+                
+                <!-- Group 1: Data Diri -->
+                <fieldset>
+                    <legend>Data Diri Mahasiswa</legend>
+
+                    <!-- Kontrol 1: Text -->
+                    <p>
+                        <label for="nama">Nama Lengkap:</label><br>
+                        <input type="text" id="nama" name="nama" required minlength="3" maxlength="50" placeholder="Masukkan nama lengkap">
+                    </p>
+
+                    <!-- Kontrol 2: Text dengan Pattern (NIM) -->
+                    <p>
+                        <label for="nim">NIM (Nomor Induk Mahasiswa):</label><br>
+                        <input type="text" id="nim" name="nim" required pattern="[0-9]{8,12}" placeholder="Contoh: 202601234">
+                    </p>
+
+                    <!-- Kontrol 3: Email -->
+                    <p>
+                        <label for="email">Email Kampus:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="nama@mahasiswa.ac.id">
+                    </p>
+
+                    <!-- Kontrol 4: Tel -->
+                    <p>
+                        <label for="telepon">Nomor Telepon/WhatsApp:</label><br>
+                        <input type="tel" id="telepon" name="telepon" required pattern="[0-9]{10,14}" placeholder="081234567890">
+                    </p>
+
+                    <!-- Kontrol 5 & 6: Radio Button (Jenis Kelamin) -->
+                    <p>
+                        <label>Jenis Kelamin:</label><br>
+                        <input type="radio" id="jk-l" name="jenis_kelamin" value="L" required>
+                        <label for="jk-l">Laki-laki</label>
+                        <input type="radio" id="jk-p" name="jenis_kelamin" value="P">
+                        <label for="jk-p">Perempuan</label>
+                    </p>
+
+                    <!-- Kontrol 7: Date -->
+                    <p>
+                        <label for="tanggal_lahir">Tanggal Lahir:</label><br>
+                        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+                    </p>
+                </fieldset>
+
+                <!-- Group 2: Pilihan Kegiatan -->
+                <fieldset>
+                    <legend>Pilihan Kegiatan & Persyaratan</legend>
+
+                    <!-- Kontrol 8: Select (Dropdown) -->
+                    <p>
+                        <label for="kegiatan_pilihan">Pilih Kegiatan:</label><br>
+                        <select id="kegiatan_pilihan" name="kegiatan_pilihan" required>
+                            <option value="">-- Pilih Salah Satu --</option>
+                            <option value="seminar">Seminar Teknologi AI</option>
+                            <option value="workshop">Workshop Desain UI/UX</option>
+                            <option value="lkti">Lomba Karya Tulis Ilmiah</option>
+                            <option value="pelatihan">Pelatihan Kepemimpinan</option>
+                            <option value="pensi">Pentas Seni & Budaya</option>
+                        </select>
+                    </p>
+
+                    <!-- Kontrol 9: File -->
+                    <p>
+                        <label for="KTM">Upload Kartu Tanda Mahasiswa (KTM) [JPG/PNG/PDF]:</label><br>
+                        <input type="file" id="KTM" name="KTM" accept=".jpg, .jpeg, .png, .pdf" required>
+                    </p>
+
+                    <!-- Kontrol 10: Textarea -->
+                    <p>
+                        <label for="alasan">Alasan Mengikuti Kegiatan:</label><br>
+                        <textarea id="alasan" name="alasan" rows="4" cols="40" required minlength="10" placeholder="Tuliskan alasan Anda..."></textarea>
+                    </p>
+
+                    <!-- Kontrol 11: Checkbox -->
+                    <p>
+                        <input type="checkbox" id="persetujuan" name="persetujuan" value="setuju" required>
+                        <label for="persetujuan">Saya menyetujui seluruh tata tertib kegiatan.</label>
+                    </p>
+                </fieldset>
+
+                <!-- Kontrol 12: Submit Button -->
+                <p>
+                    <button type="submit">Kirim Pendaftaran</button>
+                    <button type="reset">Batal / Reset</button>
+                </p>
+
+            </form>
+        </section>
+
+        <!-- Section 4: Interaktif (Details & Summary) -->
+        <section id="faq">
+            <h2>Pertanyaan Umum (FAQ)</h2>
+            <details>
+                <summary>Apakah kegiatan ini gratis?</summary>
+                <p>Ya, seluruh rangkaian kegiatan ini gratis untuk mahasiswa aktif.</p>
+            </details>
+            <details>
+                <summary>Berapa batas maksimal kegiatan yang boleh diikuti?</summary>
+                <p>Setiap mahasiswa diperbolehkan memilih maksimal 2 kegiatan yang jadwalnya tidak bertabrakan.</p>
+            </details>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Kontak Panitia: <a href="mailto:panitia@kampus.ac.id">panitia@kampus</a> | Telepon: (+62) 08888888</p>
+        <p>&copy; 2026 Portal Kegiatan Mahasiswa</p>
+    </footer>
+
+</body>
+</html>
